@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "acunmedya_dotnetangular", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day02", "Day02\Day02.csproj", "{DCC42F14-4791-4ACF-936F-B52AB2A2206F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day03", "Day03\Day03.csproj", "{884FC4DE-79B1-4E83-A426-5BB8F0650EE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{DCC42F14-4791-4ACF-936F-B52AB2A2206F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCC42F14-4791-4ACF-936F-B52AB2A2206F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCC42F14-4791-4ACF-936F-B52AB2A2206F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{884FC4DE-79B1-4E83-A426-5BB8F0650EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{884FC4DE-79B1-4E83-A426-5BB8F0650EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{884FC4DE-79B1-4E83-A426-5BB8F0650EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{884FC4DE-79B1-4E83-A426-5BB8F0650EE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
