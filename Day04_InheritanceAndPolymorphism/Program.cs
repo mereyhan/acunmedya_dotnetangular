@@ -1,6 +1,8 @@
-﻿using Day04_InheritanceAndPolymorphism.BankOperations;
+﻿using Day04_InheritanceAndPolymorphism.AbstractClass;
+using Day04_InheritanceAndPolymorphism.BankOperations;
 using Day04_InheritanceAndPolymorphism.Interface;
 using Day04_InheritanceAndPolymorphism.Staff;
+using System.Drawing;
 
 namespace Day04_InheritanceAndPolymorphism
 {
@@ -83,6 +85,14 @@ namespace Day04_InheritanceAndPolymorphism
             {
                 Console.WriteLine($"Rental ID: {rental.Id}, Car ID: {rental.CarId}, Renter: {rental.Renter}, Start: {rental.StartDate}, End: {rental.EndDate}");
             }
+            Console.WriteLine("\n\n");
+
+            // Alan Hesaplamaları
+            Shape circle = new Circle(5);
+            Shape triangle = new Triangle(3, 4, 5);
+
+            circle.Display();
+            triangle.Display();
 
         }
     } 
