@@ -11,29 +11,128 @@
             // SortWords();
             // DynamicExpandingString();
             // ReverseWords();
+            // OrtalamaHesapla();
+            // FilterSmallNumbers();
+            // AdjustStudentScores();
 
-            List<int> words04 = new List<int>();
+            /*
+            
+             *  Metot (Fonksiyon) nedir?
+                    Fonksiyon (işlev veya yordam), belirli bir işlemi gerçekleştiren ve gerektiğinde tekrar tekrar çağrılabilen kod bloklarıdır.
+
+
+             *  Metotları neden kullanırız?
+                    Kod tekrarını önleme, kodun okunabilirliğini artırma, kakımı kolaylaştırma, modülerlik sağlama, hata takibini kolaylaştırma
+                    gibi imkanlar sağladığı için.
+            
+             *  return değeri döndüren metot ile void metot arasındaki fark nedir?
+                    void metot, sağrıldığı zaman sadece içerisindeki işlemleri gerçekleştirir ve referans tutamaz.
+                    return değeri döndüren metot ise referans değer alarak işlemlerini gerçekleştirir, sonra bir değer döndürür.
+            
+             *  Metotların parametreleri nasıl çalışır?
+                    var sayılan değer olarak kullanılabilir.
+                    return değeri döndürmek için referans alınabilir.
+                    dizilerin ilk isimleri referans tutuculardır. bu şekilde, bir fonksiyon yardımıyla dizi üzerinde işlem yapılabilir.
+
+            */
+        }
+
+        // Kullanıcıdan alınan notları 50-100 arasına ayarlayan algoritma
+        static void AdjustStudentScores()
+        {
+            List<double> ogrenciNotlari = new List<double>();
             int counter = 0;
 
             while (true)
             {
-                Console.Write("Bir kelime girin (Çıkmak için 'EXIT'): ");
-                int input04 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Öğrencilerin notlarını giriniz (çıkış için negatif sayı giriniz): ");
+                double item = double.Parse(Console.ReadLine());
 
-                if (input04 == -1)
+
+                if (item < 0)
                 {
                     break;
                 }
-
-                words04.Add(input04);
-                counter++;
+                else if (item < 50)
+                {
+                    item = 50;
+                    ogrenciNotlari.Add(item);
+                    Console.WriteLine($"{++counter}. öğrencinin notu {item} olarak eklendi");
+                }
+                else if (item > 100)
+                {
+                    item = 100;
+                    ogrenciNotlari.Add(item);
+                    Console.WriteLine($"{++counter}. öğrencinin notu {item} olarak eklendi");
+                }
+                else
+                {
+                    ogrenciNotlari.Add(item);
+                    Console.WriteLine($"{++counter}. öğrencinin notu {item} olarak eklendi");
+                }
             }
 
-            Console.WriteLine("Girilen kelimeler:");
+            Console.WriteLine("ogrenci notları:");
             for (int i = 0; i < counter; i++)
             {
-                Console.WriteLine($"{i + 1}- {words04[i]}");
+                Console.WriteLine($"{i + 1}- {ogrenciNotlari[i]}");
             }
+        }
+
+        // 10'dan küçük olan sayıları filtreleyen algoritma
+        static void FilterSmallNumbers()
+        {
+            List<int> kucukSayilar = new List<int>();
+            int counter = 0;
+
+            while (true)
+            {
+                Console.Write("10'dan küçük olanları sıralanacak sayıları giriniz (çıkış için negatif sayı giriniz): ");
+                int item = int.Parse(Console.ReadLine());
+
+                if (item < 0)
+                {
+                    break;
+                }
+                else if (item < 10)
+                {
+                    kucukSayilar.Add(item);
+                    counter++;
+                }
+                else
+                {
+                    Console.WriteLine("Girilen sayı listeye eklenmedi");
+                }
+
+            }
+
+            Console.WriteLine("Girilen sayilar:");
+            for (int i = 0; i < counter; i++)
+            {
+                Console.WriteLine($"{i + 1}- {kucukSayilar[i]}");
+            }
+        }
+
+        // Ortalama hesaplayan algoritma
+        static void OrtalamaHesapla()
+        {
+            int toplam = 0, counter = 0;
+
+            while (true)
+            {
+                Console.Write($"ortalamaları alınacak {++counter}. sayıyı girin (Çıkmak için '-1'): ");
+                int item = int.Parse(Console.ReadLine());
+
+                if (item == -1)
+                {
+                    counter--;
+                    break;
+                }
+
+                toplam += item;
+            }
+
+            Console.WriteLine($"Girdiğiniz sayıların ortalaması: {toplam / counter}");
         }
 
 
